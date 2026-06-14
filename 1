@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Global Sourcing Partners | China Sourcing & Logistics</title>
+    <!-- Google Fonts for clean typography (Montserrat + Open Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 (free icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #1e2a3e;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, h4, .logo, .nav-links a, .stat-number, .btn {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: white;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.03);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #eef2f6;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #1a4d8c, #2b6cb0);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .logo span {
+            color: #e67e22;
+            background: none;
+            -webkit-background-clip: unset;
+            background-clip: unset;
+        }
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 600;
+            color: #2c3e50;
+            transition: color 0.2s;
+            font-size: 1rem;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            color: #e67e22;
+        }
+        .contact-nav {
+            background: #1a4d8c;
+            color: white !important;
+            padding: 8px 20px;
+            border-radius: 40px;
+        }
+        .contact-nav:hover {
+            background: #e67e22;
+            color: white !important;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%);
+            padding: 80px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .hero-grid {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+        .hero-content {
+            flex: 1.2;
+        }
+        .hero-badge {
+            background: #e67e2210;
+            color: #c2410c;
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            border: 1px solid #e67e2230;
+        }
+        .hero-content h1 {
+            font-size: 3.4rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #0f2b3d;
+        }
+        .hero-content h1 i {
+            color: #e67e22;
+            font-style: normal;
+        }
+        .hero-content p {
+            font-size: 1.2rem;
+            color: #2c3e50cc;
+            max-width: 550px;
+            margin-bottom: 32px;
+        }
+        .hero-stats {
+            display: flex;
+            gap: 32px;
+            margin-top: 16px;
+        }
+        .hero-stats div p:first-child {
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: #1a4d8c;
+        }
+        .btn-group {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .btn-primary {
+            background: #1a4d8c;
+            color: white;
+            padding: 12px 32px;
+            border-radius: 40px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-primary:hover {
+            background: #e67e22;
+            transform: translateY(-2px);
+        }
+        .btn-outline {
+            background: transparent;
+            border: 1.5px solid #1a4d8c;
+            color: #1a4d8c;
+            padding: 12px 32px;
+            border-radius: 40px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+        .btn-outline:hover {
+            background: #1a4d8c;
+            color: white;
+        }
+        .hero-image {
+            flex: 0.9;
+            background: #d9e2ef40;
+            border-radius: 32px;
+            padding: 20px;
+            text-align: center;
+        }
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 24px;
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1);
+        }
+
+        /* Trust badges (NZ Owned, Shenzhen based, etc) */
+        .trust-section {
+            padding: 60px 0;
+            background: white;
+        }
+        .trust-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 32px;
+            text-align: center;
+        }
+        .trust-card {
+            flex: 1;
+            min-width: 160px;
+            padding: 16px 8px;
+        }
+        .trust-icon {
+            font-size: 2.5rem;
+            color: #e67e22;
+            margin-bottom: 16px;
+        }
+        .trust-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        .trust-card p {
+            color: #4a5568;
+        }
+
+        /* Core paragraph */
+        .core-section {
+            background: #f9fbfd;
+            padding: 70px 0;
+            border-top: 1px solid #eef2f6;
+            border-bottom: 1px solid #eef2f6;
+        }
+        .core-text {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .core-text h2 {
+            font-size: 2.2rem;
+            margin-bottom: 24px;
+            font-weight: 700;
+        }
+        .core-text p {
+            font-size: 1.1rem;
+            color: #2d3e50d9;
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+        .insight-badge {
+            display: inline-flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .insight-badge span {
+            background: white;
+            padding: 8px 20px;
+            border-radius: 60px;
+            font-weight: 500;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+            border: 1px solid #e2e8f0;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .section-header h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .section-header p {
+            color: #4a5568;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .services-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            justify-content: center;
+        }
+        .service-card {
+            background: white;
+            border-radius: 24px;
+            padding: 32px 28px;
+            flex: 1 1 260px;
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
+            transition: all 0.2s ease;
+            border: 1px solid #edf2f7;
+        }
+        .service-card:hover {
+            transform: translateY(-6px);
+            border-color: #e2e8f0;
+            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.1);
+        }
+        .service-icon {
+            font-size: 2.5rem;
+            color: #1a4d8c;
+            margin-bottom: 20px;
+        }
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        .service-card p {
+            color: #4a5568;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        .service-link {
+            text-decoration: none;
+            font-weight: 600;
+            color: #e67e22;
+        }
+
+        /* Stats numbers */
+        .stats-section {
+            background: linear-gradient(110deg, #102b3f 0%, #1a3e5c 100%);
+            color: white;
+            padding: 70px 0;
+        }
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+            text-align: center;
+        }
+        .stat-item {
+            flex: 1;
+        }
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+        .stat-label {
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            opacity: 0.85;
+        }
+
+        /* CTA section */
+        .cta-section {
+            padding: 80px 0;
+            background: #fefaf5;
+            text-align: center;
+        }
+        .cta-card {
+            max-width: 780px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 48px;
+            padding: 56px 40px;
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.05);
+            border: 1px solid #f0e7de;
+        }
+        .cta-card h2 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+        .cta-card p {
+            font-size: 1.1rem;
+            color: #2d3e50;
+            margin-bottom: 32px;
+        }
+        .cta-btn {
+            background: #e67e22;
+            color: white;
+            padding: 14px 40px;
+            border-radius: 60px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.2s;
+        }
+        .cta-btn:hover {
+            background: #1a4d8c;
+            transform: scale(1.02);
+        }
+
+        /* Footer */
+        footer {
+            background: #0f2b3d;
+            color: #cbd5e1;
+            padding: 48px 0 24px;
+            font-size: 0.9rem;
+        }
+        .footer-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 48px;
+        }
+        .footer-col p {
+            margin-top: 12px;
+            max-width: 260px;
+        }
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 18px;
+            font-weight: 600;
+        }
+        .footer-col a {
+            color: #cbd5e1;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .footer-col a:hover {
+            color: #e67e22;
+        }
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #254358;
+            padding-top: 24px;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 16px;
+            }
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            .hero-grid {
+                flex-direction: column;
+            }
+            .trust-grid, .services-grid, .stats-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            .stat-number {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">Prestige<span>Sourcing</span> • Global</div>
+            <div class="nav-links">
+                <a href="#" class="active">Home</a>
+                <a href="#">Services</a>
+                <a href="#">Sourcing</a>
+                <a href="#">Contact</a>
+                <a href="#" class="contact-nav">Get in touch</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Section inspired by "China Sourcing Without the Guesswork" -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-globe-asia"></i> New Zealand-owned · Shenzhen-based
+                </div>
+                <h1>China Sourcing <br> Without <i>the Guesswork</i></h1>
+                <p>Helping businesses source products, manage suppliers, coordinate freight, and ship goods from China. Practical, transparent, and results-driven.</p>
+                <div class="btn-group">
+                    <a href="#" class="btn-primary">Start sourcing <i class="fas fa-arrow-right"></i></a>
+                    <a href="#" class="btn-outline">How it works</a>
+                </div>
+                <div class="hero-stats">
+                    <div><p>18+</p><span>Years China exp.</span></div>
+                    <div><p>100+</p><span>Active orders</span></div>
+                    <div><p>🌏</p><span>China → Global</span></div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!-- mock image placeholder, free & representative -->
+                <img src="https://placehold.co/600x400/1e3a5f/white?text=Shenzhen+Operations+Hub" alt="sourcing operations">
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust badges: NZ Owned, Shenzhen Based, 18+ Years, China->Global Solutions -->
+    <section class="trust-section">
+        <div class="container trust-grid">
+            <div class="trust-card"><div class="trust-icon"><i class="fas fa-kiwi-bird"></i></div><h4>NZ Owned</h4><p>Kiwi-owned with local integrity</p></div>
+            <div class="trust-card"><div class="trust-icon"><i class="fas fa-city"></i></div><h4>Shenzhen Based</h4><p>On the ground, inside the ecosystem</p></div>
+            <div class="trust-card"><div class="trust-icon"><i class="fas fa-chart-line"></i></div><h4>18+ Years Experience</h4><p>China manufacturing & sourcing</p></div>
+            <div class="trust-card"><div class="trust-icon"><i class="fas fa-ship"></i></div><h4>China → Global</h4><p>Air, sea, worldwide logistics</p></div>
+        </div>
+    </section>
+
+    <!-- Core message: Real operational depth -->
+    <section class="core-section">
+        <div class="container core-text">
+            <h2>Practical China sourcing support with real operational depth</h2>
+            <p>We operate inside the Chinese manufacturing ecosystem, supporting international businesses with supplier identification, sourcing structure, production coordination, and logistics alignment. Our approach focuses on reducing uncertainty and improving visibility at each stage of the sourcing process – from early supplier engagement through to shipment readiness and international delivery planning.</p>
+            <div class="insight-badge">
+                <span><i class="fas fa-search"></i> Supplier validation</span>
+                <span><i class="fas fa-clipboard-list"></i> Sampling & oversight</span>
+                <span><i class="fas fa-chart-simple"></i> Production follow-up</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section (5 main services, exactly as described) -->
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>End-to-end sourcing & logistics solutions</h2>
+                <p>From supplier search to freight, we streamline your China procurement</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-industry"></i></div>
+                    <h3>Supplier Sourcing</h3>
+                    <p>Supplier search, verification, factory coordination, sampling, and production oversight.</p>
+                    <a href="#" class="service-link">Learn more →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-cart-shopping"></i></div>
+                    <h3>Purchasing Support</h3>
+                    <p>Alibaba, trade shows, markets, factory communication, pricing, and order coordination.</p>
+                    <a href="#" class="service-link">Learn more →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-boxes"></i></div>
+                    <h3>Freight & Logistics</h3>
+                    <p>Air freight, sea freight, warehousing, consolidation, and international shipment coordination.</p>
+                    <a href="#" class="service-link">Learn more →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-tags"></i></div>
+                    <h3>Brand-Ready Sourcing</h3>
+                    <p>Packaging, labelling, supplier development, and brand-ready product sourcing.</p>
+                    <a href="#" class="service-link">Learn more →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-chalkboard-user"></i></div>
+                    <h3>Local Buying Support</h3>
+                    <p>Taobao, local markets, trade shows, and on-ground buying assistance in China.</p>
+                    <a href="#" class="service-link">Learn more →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics / numbers section -->
+    <section class="stats-section">
+        <div class="container stats-grid">
+            <div class="stat-item"><div class="stat-number">18+</div><div class="stat-label">Years China Experience</div></div>
+            <div class="stat-item"><div class="stat-number">350+</div><div class="stat-label">Orders Completed</div></div>
+            <div class="stat-item"><div class="stat-number">7,200+</div><div class="stat-label">Cartons Shipped</div></div>
+            <div class="stat-item"><div class="stat-number">100%</div><div class="stat-label">Client-focused approach</div></div>
+        </div>
+    </section>
+
+    <!-- Global reach & local insight paragraph (similar to "Global reach. Local insight.") -->
+    <section class="core-section" style="background: white; border: none; padding-top: 40px;">
+        <div class="container core-text">
+            <h2 style="font-size: 1.9rem;">Global reach. Local insight. Results that matter.</h2>
+            <p>We support international businesses navigating sourcing, production and logistics in China. From early supplier engagement through to shipment readiness, our focus is on reducing uncertainty and improving visibility across every stage of the process — supplier verification, on-the-ground coordination, consolidation, and international shipment planning aligned to your commercial goals.</p>
+        </div>
+    </section>
+
+    <!-- Call to Action: "Planning to source or manufacture in China?" -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-card">
+                <h2>Planning to source or manufacture in China?</h2>
+                <p>Whether you are importing for the first time or scaling existing suppliers, we can help you structure the process properly from the start. Let's discuss your sourcing or logistics project.</p>
+                <a href="#" class="cta-btn">Let's talk <i class="fas fa-comment-dots"></i></a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="logo" style="color:white; background: none; font-size: 1.6rem;">Prestige<span style="color:#e67e22;">Sourcing</span></div>
+                <p>New Zealand-owned, Shenzhen-based sourcing partner. Real depth in Chinese manufacturing.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <a href="#">Supplier identification</a>
+                <a href="#">Quality control & sampling</a>
+                <a href="#">Freight consolidation</a>
+                <a href="#">Warehousing & dispatch</a>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <a href="#">Contact us</a>
+                <a href="#">Sourcing guide</a>
+                <a href="#">FAQ</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p><i class="fas fa-envelope"></i> sourcing@prestigesourcing.net</p>
+                <p><i class="fas fa-map-marker-alt"></i> Shenzhen, China / Auckland, NZ</p>
+                <p><i class="fab fa-weixin"></i> WeChat: PrestigeSourcing</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025 Prestige Sourcing Global — Practical China sourcing without the guesswork. All insights are for reference.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Simple interactive hover improvements, no frameworks needed -->
+</body>
+</html>
