@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Prestige Sourcing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: #1e2a3e; line-height: 1.5; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+        header { background: white; box-shadow: 0 2px 15px rgba(0,0,0,0.03); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid #eef2f6; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; flex-wrap: wrap; }
+        .logo { font-size: 1.8rem; font-weight: 800; background: linear-gradient(135deg, #1a4d8c, #2b6cb0); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .logo span { color: #e67e22; background: none; }
+        .nav-links { display: flex; gap: 32px; align-items: center; flex-wrap: wrap; }
+        .nav-links a { text-decoration: none; font-weight: 600; color: #2c3e50; transition: color 0.2s; }
+        .nav-links a:hover, .nav-links a.active { color: #e67e22; }
+        .contact-nav { background: #1a4d8c; color: white !important; padding: 8px 20px; border-radius: 40px; }
+        .page-hero { background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%); padding: 60px 0; text-align: center; }
+        .page-hero h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 16px; }
+        .contact-section { padding: 60px 0; }
+        .contact-grid { display: flex; gap: 48px; flex-wrap: wrap; }
+        .contact-info { flex: 1; }
+        .contact-form { flex: 1; background: #f9fbfd; padding: 32px; border-radius: 24px; }
+        .contact-info i { width: 40px; color: #1a4d8c; font-size: 1.4rem; }
+        .contact-info p { margin: 16px 0; display: flex; align-items: center; gap: 12px; }
+        input, textarea { width: 100%; padding: 12px; margin-bottom: 16px; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; }
+        button { background: #1a4d8c; color: white; padding: 12px 24px; border: none; border-radius: 40px; font-weight: 600; cursor: pointer; }
+        button:hover { background: #e67e22; }
+        footer { background: #0f2b3d; color: #cbd5e1; padding: 48px 0 24px; margin-top: 40px; }
+        .footer-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px; margin-bottom: 48px; }
+        .copyright { text-align: center; border-top: 1px solid #254358; padding-top: 24px; }
+        @media (max-width: 768px) { .navbar { flex-direction: column; gap: 16px; } .page-hero h1 { font-size: 2rem; } }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">Prestige<span>Sourcing</span></div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="sourcing.html">Sourcing</a>
+                <a href="contact.html" class="active">Contact</a>
+                <a href="contact.html" class="contact-nav">Get in touch</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="page-hero">
+        <div class="container">
+            <h1>Get in Touch</h1>
+            <p>Ready to start sourcing? Let's discuss your project.</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container contact-grid">
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <p><i class="fas fa-map-marker-alt"></i> Shenzhen, China / Auckland, New Zealand</p>
+                <p><i class="fas fa-envelope"></i> sourcing@prestigesourcing.net</p>
+                <p><i class="fab fa-weixin"></i> WeChat: PrestigeSourcing</p>
+                <p><i class="fab fa-whatsapp"></i> +86 123 4567 890</p>
+            </div>
+            <div class="contact-form">
+                <h3>Send a Message</h3>
+                <form action="#">
+                    <input type="text" placeholder="Your Name">
+                    <input type="email" placeholder="Email Address">
+                    <input type="text" placeholder="Product Interested In">
+                    <textarea rows="4" placeholder="Tell us about your sourcing needs"></textarea>
+                    <button type="submit">Send Inquiry →</button>
+                </form>
+                <p style="font-size: 0.8rem; margin-top: 12px;">*We'll respond within 24 hours</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div><div class="logo" style="color:white; background:none;">Prestige<span style="color:#e67e22;">Sourcing</span></div><p>New Zealand-owned, Shenzhen-based</p></div>
+            <div><h4>Quick links</h4><a href="services.html" style="color:#cbd5e1; text-decoration:none;">Services</a><br><a href="sourcing.html" style="color:#cbd5e1; text-decoration:none;">Sourcing</a></div>
+            <div><h4>Contact</h4><p><i class="fas fa-envelope"></i> sourcing@prestigesourcing.net</p></div>
+        </div>
+        <div class="copyright">© 2025 Prestige Sourcing Global</div>
+    </div>
+</footer>
+</body>
+</html>
