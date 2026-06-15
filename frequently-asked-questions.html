@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - Prestige Sourcing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: #1e2a3e; line-height: 1.5; background: #fff; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+        
+        /* 头部导航 (与之前样式完全一致) */
+        header { background: white; box-shadow: 0 2px 15px rgba(0,0,0,0.03); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid #eef2f6; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; flex-wrap: wrap; }
+        .logo { font-size: 1.8rem; font-weight: 800; background: linear-gradient(135deg, #1a4d8c, #2b6cb0); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .logo span { color: #e67e22; background: none; }
+        .nav-links { display: flex; gap: 32px; align-items: center; flex-wrap: wrap; }
+        .nav-links a { text-decoration: none; font-weight: 600; color: #2c3e50; transition: color 0.2s; }
+        .nav-links a:hover, .nav-links a.active { color: #e67e22; }
+        .contact-nav { background: #1a4d8c; color: white !important; padding: 8px 20px; border-radius: 40px; }
+        .contact-nav:hover { background: #e67e22; color: white !important; }
+        
+        /* 页面头部 */
+        .page-hero { background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%); padding: 60px 0; text-align: center; border-bottom: 1px solid #e2e8f0; }
+        .page-hero h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 16px; }
+        .page-hero p { font-size: 1.2rem; color: #2c3e50cc; max-width: 700px; margin: 0 auto; }
+        
+        /* FAQ 区域布局 */
+        .faq-section { padding: 70px 0; background: #ffffff; }
+        .faq-grid { max-width: 900px; margin: 0 auto; }
+        .faq-category { margin-bottom: 48px; }
+        .faq-category h2 { font-size: 1.8rem; font-weight: 700; margin-bottom: 28px; border-left: 5px solid #e67e22; padding-left: 20px; color: #1a4d8c; }
+        .faq-item { border-bottom: 1px solid #e2edf2; margin-bottom: 20px; }
+        .faq-question { font-weight: 700; font-size: 1.2rem; padding: 20px 0 12px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: #0f2b3d; transition: 0.2s; }
+        .faq-question i { color: #e67e22; transition: transform 0.2s; font-size: 1.2rem; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; padding-right: 20px; color: #2d3e50d9; line-height: 1.6; }
+        .faq-answer p, .faq-answer ul { margin-bottom: 16px; margin-left: 20px; }
+        .faq-item.active .faq-answer { max-height: 600px; margin-bottom: 24px; }
+        .faq-item.active .faq-question i { transform: rotate(45deg); }
+        
+        /* 页脚 */
+        footer { background: #0f2b3d; color: #cbd5e1; padding: 48px 0 24px; margin-top: 40px; }
+        .footer-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px; margin-bottom: 48px; }
+        .copyright { text-align: center; border-top: 1px solid #254358; padding-top: 24px; font-size: 0.85rem; }
+        @media (max-width: 768px) { .navbar { flex-direction: column; gap: 16px; } .page-hero h1 { font-size: 2rem; } }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">Prestige<span>Sourcing</span></div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="sourcing.html">Sourcing</a>
+                <a href="frequently-asked-questions.html" class="active">FAQs</a>
+                <a href="contact.html" class="contact-nav">Get in touch</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="page-hero">
+        <div class="container">
+            <h1>Frequently Asked Questions</h1>
+            <p>Explore some of our most commonly asked questions below. If you don't find what you are looking for, you are welcome to <a href="contact.html" style="color:#e67e22;">contact us</a> with your specific requirements.</p>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container faq-grid">
+            <!-- 分类 1: Sourcing and Supply -->
+            <div class="faq-category">
+                <h2>Sourcing and Supply</h2>
+                
+                <div class="faq-item"><div class="faq-question">How do your sourcing fees work? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>We offer flexible engagement models: Client-Managed (we provide on-ground support while you manage supplier directly), PSG-Managed (we handle end-to-end from vetting to delivery), or Hybrid. Fees may be structured as a fixed project fee, hourly rate, percentage of order value, or commission.</p></div></div>
+                
+                <div class="faq-item"><div class="faq-question">Is there a minimum order value for sourcing projects? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>For sourcing and supply projects, our usual minimum is around USD $10,000 / NZD $15,000 net monthly order value. This can vary depending on product complexity, workload, and current capacity.</p></div></div>
+                
+                <div class="faq-item"><div class="faq-question">Why do you have a minimum order value? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>Sourcing from China takes experience, coordination, and time. A single USD $10,000 order is usually far more efficient to manage properly than ten separate USD $1,000 orders. If your order is below our minimum, we may still help through paid consulting or freight support.</p></div></div>
+                
+                <div class="faq-item"><div class="faq-question">Are there any products you do not supply? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>We do not source counterfeit, copyright-infringing, or otherwise illegal products. As the importer, you are responsible for ensuring compliance with your local laws and import regulations.</p></div></div>
+                
+                <div class="faq-item"><div class="faq-question">Can you supply and ship goods worldwide? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>We can ship to any country not subject to trade restrictions under WTO, UN, or international law. Buyers are responsible for ensuring their destination is not under any active trade embargo.</p></div></div>
+                
+                <div class="faq-item"><div class="faq-question">Do you only source within Guangdong? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>No, we source from anywhere in China. While Guangdong projects often involve lower travel costs, we work with trusted partners nationwide to manage projects efficiently.</p></div></div>
+            </div>
+            
+            <!-- 分类 2: Freight & Warehousing -->
+            <div class="faq-category">
+                <h2>Freight & Warehousing</h2>
+                
+                <div class="faq-item"><div class="faq-question">Can I use your freight service without using your sourcing service? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>Yes, we offer freight services to all customers. Sourcing clients receive preferential rates, but non-sourcing customers are welcome to request quotes. Minimum shipment volumes may apply depending on destination.</p></div></div>
+                
+                <div class="faq-item"><div class="faq-question">Do you ship from China to New Zealand and Australia? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>Yes, we regularly handle freight to both NZ and Australia, including major centres and regional/rural addresses depending on the freight method.</p></div></div>
+                
+                <div class="faq-item"><div class="faq-question">What freight options do you offer? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>Sea freight (LCL/FCL), air freight, courier, express shipping, door-to-door, warehouse consolidation, and Amazon FBA preparation support.</p></div></div>
+                
+                <div class="faq-item"><div class="faq-question">Can you collect goods from my supplier in China? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>Yes. We can coordinate pickup from your supplier's address, warehouse, or factory in China. We'll need supplier contact details, pickup address, carton details, and product information.</p></div></div>
+                
+                <div class="faq-item"><div class="faq-question">Can you consolidate goods from multiple suppliers? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>Yes. Consolidation helps reduce duplicated freight and customs charges. We'll check product types, sizes, supplier locations, and timing to determine suitability.</p></div></div>
+                
+                <div class="faq-item"><div class="faq-question">Do freight prices fluctuate? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>Yes. Freight prices can change due to fuel costs, exchange rates, capacity, peak season, and port congestion. Any estimate is indicative until shipment details are confirmed.</p></div></div>
+                
+                <div class="faq-item"><div class="faq-question">What information do you need for a freight quote? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>We typically need: pickup city, delivery address, INCOTERMS, product name/HSCODE, carton count/dimensions/weight, total value, and any special handling requirements (batteries, liquids, etc).</p></div></div>
+            </div>
+            
+            <!-- 分类 3: eCommerce Seller Services -->
+            <div class="faq-category">
+                <h2>eCommerce Seller Services</h2>
+                
+                <div class="faq-item"><div class="faq-question">Can you help if we are new to eCommerce? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>Our full sourcing services are best for businesses with an active budget and product direction. If you're just starting, hourly consulting may be a better fit before committing to manufacturing.</p></div></div>
+                
+                <div class="faq-item"><div class="faq-question">Do you assist with dropshipping? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>We source direct from China and don't operate as a dropshipping service. However, we can help established dropshippers transition toward holding inventory with store-and-ship operations.</p></div></div>
+                
+                <div class="faq-item"><div class="faq-question">Can you ship goods to Amazon FBA? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>Yes, we can ship directly to Amazon FBA warehouses worldwide using Delivered Duty Paid (DDP) shipping options.</p></div></div>
+                
+                <div class="faq-item"><div class="faq-question">Can you print and apply product labels for FBA? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>Yes. We can help arrange printing and application of FNSKU labels, carton labels, and barcodes. Clients must provide the correct label files and Amazon shipment requirements before packing.</p></div></div>
+            </div>
+            
+            <p style="margin-top: 40px; text-align: center; font-style: italic;">Still have questions? <a href="contact.html" style="color:#e67e22; font-weight:600;">Contact us directly →</a></p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div><div class="logo" style="color:white; background:none;">Prestige<span style="color:#e67e22;">Sourcing</span></div><p>New Zealand-owned, Shenzhen-based</p></div>
+            <div><h4>Quick links</h4><a href="services.html" style="color:#cbd5e1; text-decoration:none;">Services</a><br><a href="sourcing.html" style="color:#cbd5e1; text-decoration:none;">Sourcing</a><br><a href="frequently-asked-questions.html" style="color:#cbd5e1; text-decoration:none;">FAQs</a></div>
+            <div><h4>Contact</h4><p><i class="fas fa-envelope"></i> sourcing@prestigesourcing.net</p></div>
+        </div>
+        <div class="copyright">© 2025 Prestige Sourcing Global — Practical China sourcing without the guesswork</div>
+    </div>
+</footer>
+
+<script>
+    // 简单的折叠展开功能
+    document.querySelectorAll('.faq-question').forEach(question => {
+        question.addEventListener('click', () => {
+            const parent = question.parentElement;
+            parent.classList.toggle('active');
+        });
+    });
+</script>
+</body>
+</html>
