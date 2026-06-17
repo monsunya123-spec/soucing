@@ -18,10 +18,10 @@
         }
 
         :root {
-            --gold: #fdca40;
-            --navy: #1d3759;
-            --deep: #013941;
-            --ink: #0a0d14;
+            --gold: #000000;
+            --navy: #000000;
+            --deep: #111111;
+            --ink: #050505;
             --muted: rgba(8, 15, 26, 0.72);
             --soft: #f6f8fa;
             --line: rgba(8, 15, 26, 0.13);
@@ -74,7 +74,7 @@
         }
 
         .logo-mark {
-            color: var(--gold);
+            color: #000000;
         }
 
         .nav-links {
@@ -95,7 +95,7 @@
 
         .nav-links a:hover,
         .nav-links a.active {
-            color: var(--gold);
+            color: #000000;
         }
 
         .contact-nav {
@@ -109,8 +109,8 @@
         }
 
         .contact-nav:hover {
-            background: var(--gold);
-            color: #000000 !important;
+            background: #222222;
+            color: #ffffff !important;
         }
 
         .hero {
@@ -170,26 +170,26 @@
         }
 
         .btn-primary {
-            background: var(--gold);
-            color: var(--ink);
-            border: 2px solid var(--gold);
+            background: #000000;
+            color: #ffffff;
+            border: 2px solid #000000;
         }
 
         .btn-primary:hover {
-            background: var(--navy);
-            border-color: var(--navy);
-            color: #ffffff;
+            background: #ffffff;
+            border-color: #000000;
+            color: #000000;
         }
 
         .btn-outline {
             background: #ffffff;
-            color: var(--navy);
-            border: 2px solid rgba(29, 55, 89, 0.18);
+            color: #000000;
+            border: 2px solid rgba(0, 0, 0, 0.18);
         }
 
         .btn-outline:hover {
-            background: var(--navy);
-            border-color: var(--navy);
+            background: #000000;
+            border-color: #000000;
             color: #ffffff;
         }
 
@@ -201,14 +201,14 @@
             border: 1px solid #e2e4e9;
             border-radius: 100px;
             padding: 8px 14px;
-            color: var(--navy);
+            color: #000000;
             font-size: 0.88rem;
             font-weight: 600;
             margin-bottom: 22px;
         }
 
         .hero-kicker i {
-            color: var(--gold);
+            color: #000000;
         }
 
         .hero-proof {
@@ -229,23 +229,24 @@
         }
 
         .proof-pill i {
-            color: var(--gold);
+            color: #000000;
             margin-right: 7px;
         }
 
         .hero-visual {
             position: relative;
-            min-height: 520px;
+            min-height: 0;
+            aspect-ratio: 16 / 10;
         }
 
         .hero-image-card {
             position: absolute;
-            inset: 34px 0 0 30px;
+            inset: 0;
             border: 4px solid #ffffff;
             border-radius: 32px;
             overflow: hidden;
             box-shadow: 16px 24px 72px rgba(0, 0, 0, 0.14);
-            background: var(--navy);
+            background: #000000;
         }
 
         .hero-image-card img {
@@ -256,16 +257,13 @@
         }
 
         .hero-image-bg {
-            position: absolute;
-            inset: 0 42px 52px 0;
-            border-radius: 32px;
-            background: var(--gold);
+            display: none;
         }
 
         .hero-pop {
             position: absolute;
-            left: 0;
-            bottom: 32px;
+            left: -28px;
+            bottom: 28px;
             max-width: 250px;
             padding: 18px;
             border-radius: 24px;
@@ -293,8 +291,8 @@
             align-items: center;
             justify-content: center;
             border-radius: 50%;
-            background: rgba(253, 202, 64, 0.22);
-            color: var(--navy);
+            background: rgba(0, 0, 0, 0.06);
+            color: #000000;
             margin-bottom: 12px;
         }
 
@@ -321,7 +319,7 @@
         }
 
         .trust-icon {
-            color: var(--gold);
+            color: #000000;
             font-size: 30px;
             line-height: 1;
             margin-bottom: 12px;
@@ -398,8 +396,8 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            color: var(--navy);
-            background: rgba(253, 202, 64, 0.26);
+            color: #000000;
+            background: rgba(0, 0, 0, 0.06);
             border-radius: 100px;
             padding: 7px 14px;
             font-size: 0.86rem;
@@ -433,14 +431,14 @@
         }
 
         .service-card:hover {
-            border-color: var(--gold);
+            border-color: #000000;
             transform: translateY(-4px);
             box-shadow: 16px 16px 64px rgba(0, 0, 0, 0.06);
         }
 
         .service-icon {
-            color: var(--navy);
-            background: rgba(253, 202, 64, 0.32);
+            color: #000000;
+            background: rgba(0, 0, 0, 0.06);
             width: 58px;
             height: 58px;
             border-radius: 50%;
@@ -461,7 +459,7 @@
         }
 
         .service-link {
-            color: var(--navy);
+            color: #000000;
             font-weight: 600;
             text-decoration: none;
             margin-top: 22px;
@@ -475,8 +473,8 @@
             width: 34px;
             height: 34px;
             border-radius: 50%;
-            background: var(--gold);
-            color: var(--ink);
+            background: #000000;
+            color: #ffffff;
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -514,8 +512,8 @@
         }
 
         .feature-card i {
-            color: var(--navy);
-            background: rgba(253, 202, 64, 0.24);
+            color: #000000;
+            background: rgba(0, 0, 0, 0.06);
             width: 58px;
             height: 58px;
             border-radius: 100px;
@@ -544,7 +542,7 @@
         }
 
         .stat-number {
-            color: var(--navy);
+            color: #000000;
             font-size: 56px;
             line-height: 1;
             font-weight: 600;
@@ -566,7 +564,7 @@
             display: grid;
             grid-template-columns: 0.95fr 1.05fr;
             overflow: hidden;
-            background: var(--navy);
+            background: #000000;
             border-radius: 32px;
         }
 
@@ -601,15 +599,15 @@
         }
 
         .cta-btn {
-            background: var(--gold);
-            border: 2px solid var(--gold);
-            color: var(--ink);
+            background: #ffffff;
+            border: 2px solid #ffffff;
+            color: #000000;
             font-size: 17px;
         }
 
         .cta-btn:hover {
-            background: var(--gold);
-            border-color: var(--gold);
+            background: #f2f2f2;
+            border-color: #f2f2f2;
             color: #000000;
         }
 
@@ -646,7 +644,7 @@
         }
 
         .footer-col a:hover {
-            color: var(--gold);
+            color: #ffffff;
         }
 
         .copyright {
@@ -689,7 +687,8 @@
             }
 
             .hero-visual {
-                min-height: 460px;
+                min-height: 0;
+                aspect-ratio: 16 / 10;
             }
         }
 
@@ -755,22 +754,23 @@
             }
 
             .hero-visual {
-                min-height: 360px;
+                min-height: 0;
+                aspect-ratio: 16 / 10;
                 margin-top: 24px;
             }
 
             .hero-image-bg {
-                inset: 0 20px 44px 0;
+                display: none;
             }
 
             .hero-image-card {
-                inset: 24px 0 0 16px;
+                inset: 0;
                 border-radius: 24px;
             }
 
             .hero-pop {
-                left: 0;
-                bottom: 12px;
+                left: 16px;
+                bottom: -24px;
                 max-width: 220px;
                 border-radius: 20px;
             }
