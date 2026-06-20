@@ -3,32 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sourcing Process - Prestige Sourcing</title>
+    <title>Sourcing Process - Buyzo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; color: #1e2a3e; line-height: 1.5; }
-        .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
-        header { background: white; box-shadow: 0 2px 15px rgba(0,0,0,0.03); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid #eef2f6; }
-        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; flex-wrap: wrap; }
-        .logo { font-size: 1.8rem; font-weight: 800; background: linear-gradient(135deg, #1a4d8c, #2b6cb0); -webkit-background-clip: text; background-clip: text; color: transparent; }
-        .logo span { color: #e67e22; background: none; }
-        .nav-links { display: flex; gap: 32px; align-items: center; flex-wrap: wrap; }
-        .nav-links a { text-decoration: none; font-weight: 600; color: #2c3e50; transition: color 0.2s; }
-        .nav-links a:hover, .nav-links a.active { color: #e67e22; }
-        .contact-nav { background: #1a4d8c; color: white !important; padding: 8px 20px; border-radius: 40px; }
-        .page-hero { background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%); padding: 60px 0; text-align: center; }
-        .page-hero h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 16px; }
-        .process-steps { padding: 60px 0; }
-        .step { display: flex; gap: 24px; margin-bottom: 40px; align-items: flex-start; flex-wrap: wrap; }
-        .step-number { background: #1a4d8c; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; }
-        footer { background: #0f2b3d; color: #cbd5e1; padding: 48px 0 24px; margin-top: 40px; }
-        .footer-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px; margin-bottom: 48px; }
-        .copyright { text-align: center; border-top: 1px solid #254358; padding-top: 24px; }
-        @media (max-width: 768px) { .navbar { flex-direction: column; gap: 16px; } .page-hero h1 { font-size: 2rem; } }
+        :root { --red: #d9043d; --red-soft: rgba(217,4,61,0.08); --deep: #9d002c; --ink: #050505; --muted: rgba(5,5,5,0.68); --soft: #f6f6f6; --line: rgba(5,5,5,0.12); }
+        body { font-family: 'Inter', sans-serif; color: var(--ink); line-height: 1.7; background: #fff; }
+        .container { max-width: 1300px; margin: 0 auto; padding: 0 80px; }
+        header { background: #fff; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--line); }
+        .navbar { display: flex; justify-content: space-between; align-items: center; min-height: 82px; gap: 32px; }
+        .logo { font-size: 1.75rem; font-weight: 700; color: #000; line-height: 1; white-space: nowrap; }
+        .logo span, .logo-mark { color: var(--red); background: none; }
+        .nav-links { display: flex; gap: 28px; align-items: center; flex-wrap: wrap; justify-content: flex-end; }
+        .nav-links a { text-decoration: none; font-weight: 500; color: #111; transition: color 0.2s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--red); text-decoration: underline; text-underline-offset: 6px; }
+        .contact-nav { background: var(--red); color: #fff !important; min-height: 42px; padding: 8px 20px; border-radius: 100px; text-decoration: none !important; }
+        .contact-nav:hover { background: var(--deep); color: #fff !important; }
+        .page-hero { background: var(--soft); padding: 76px 0 64px; text-align: left; border-bottom: 1px solid var(--line); }
+        .page-hero h1 { font-size: 52px; line-height: 1.08; font-weight: 600; margin-bottom: 16px; max-width: 780px; }
+        .page-hero p { color: var(--muted); font-size: 18px; max-width: 680px; }
+        .process-steps { padding: 72px 0; background: #fff; }
+        .step { display: grid; grid-template-columns: 56px minmax(0,1fr); gap: 24px; margin-bottom: 22px; align-items: flex-start; padding: 28px; border: 1px solid var(--line); border-radius: 28px; min-height: 150px; transition: border-color 0.2s ease, box-shadow 0.2s ease; }
+        .step:hover { border-color: var(--red); box-shadow: 16px 16px 64px rgba(217,4,61,0.08); }
+        .step-number { background: var(--red); color: #fff; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.15rem; font-weight: 700; }
+        .step h3 { font-size: 1.45rem; margin-bottom: 18px; }
+        .step p { color: var(--muted); }
+        .step-compare { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+        .step-panel { background: var(--soft); border: 1px solid var(--line); border-radius: 20px; padding: 20px; }
+        .step-panel h4 { color: #000; font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+        .step-panel.with-buyzo { background: var(--red-soft); border-color: rgba(217,4,61,0.18); }
+        .step-panel.with-buyzo h4 { color: var(--red); }
+        footer { background: var(--deep); color: rgba(255,255,255,0.74); padding: 54px 0 26px; margin-top: 0; }
+        .footer-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px; margin-bottom: 42px; }
+        footer a { color: rgba(255,255,255,0.74) !important; text-decoration: none !important; }
+        footer a:hover { color: #fff !important; }
+        .copyright { text-align: center; border-top: 1px solid rgba(255,255,255,0.16); padding-top: 22px; }
+        @media (max-width: 768px) { .container { padding: 0 20px; } .navbar { flex-direction: column; gap: 16px; padding: 18px 0; } .nav-links { justify-content: center; gap: 18px; } .page-hero h1 { font-size: 36px; } .step { grid-template-columns: 1fr; border-radius: 22px; } .step-compare { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -36,11 +49,12 @@
 <header>
     <div class="container">
         <div class="navbar">
-            <div class="logo">Prestige<span>Sourcing</span></div>
+            <div class="logo">Buy<span class="logo-mark">zo</span></div>
             <div class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="services.html">Services</a>
                 <a href="sourcing.html" class="active">Sourcing</a>
+                <a href="frequently-asked-questions.html">FAQs</a>
                 <a href="contact.html">Contact</a>
                 <a href="contact.html" class="contact-nav">Get in touch</a>
             </div>
@@ -58,24 +72,29 @@
 
     <section class="process-steps">
         <div class="container">
-            <div class="step"><div class="step-number">1</div><div><h3>Requirement Analysis</h3><p>We discuss your product needs, budget, quality expectations, and timeline to create a detailed sourcing brief.</p></div></div>
-            <div class="step"><div class="step-number">2</div><div><h3>Supplier Research</h3><p>Our team searches Alibaba, trade shows, and factory databases to find 3-5 qualified suppliers that match your requirements.</p></div></div>
-            <div class="step"><div class="step-number">3</div><div><h3>Verification & Sampling</h3><p>We verify supplier credentials, negotiate pricing, and coordinate sample production and evaluation.</p></div></div>
-            <div class="step"><div class="step-number">4</div><div><h3>Production & QC</h3><p>Once samples are approved, we oversee production, conduct quality inspections, and provide progress reports.</p></div></div>
-            <div class="step"><div class="step-number">5</div><div><h3>Logistics & Delivery</h3><p>We arrange freight, consolidation, customs clearance, and final delivery to your door.</p></div></div>
-        </div>
-    </section>
-</main>
-
-<footer>
-    <div class="container">
-        <div class="footer-grid">
-            <div><div class="logo" style="color:white; background:none;">Prestige<span style="color:#e67e22;">Sourcing</span></div><p>New Zealand-owned, Shenzhen-based</p></div>
-            <div><h4>Quick links</h4><a href="services.html" style="color:#cbd5e1; text-decoration:none;">Services</a><br><a href="sourcing.html" style="color:#cbd5e1; text-decoration:none;">Sourcing</a></div>
-            <div><h4>Contact</h4><p><i class="fas fa-envelope"></i> sourcing@prestigesourcing.net</p></div>
-        </div>
-        <div class="copyright">© 2025 Prestige Sourcing Global</div>
-    </div>
-</footer>
-</body>
-</html>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div>
+                    <h3>Requirement Analysis</h3>
+                    <div class="step-compare">
+                        <div class="step-panel">
+                            <h4>Before Buyzo</h4>
+                            <p>You know what you want, but turning ideas into clear specifications is harder than it sounds. Designs keep changing. Feedback loops drag on. Samples miss expectations. Timelines slip. Most production problems don't start in the factory — they start with unclear requirements.</p>
+                        </div>
+                        <div class="step-panel with-buyzo">
+                            <h4>With Buyzo</h4>
+                            <p>We turn concepts into production-ready specifications. Ambiguity becomes clarity. Everyone works from the same playbook. When requirements are right from the beginning, everything else becomes easier.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div>
+                    <h3>Supplier Research</h3>
+                    <div class="step-compare">
+                        <div class="step-panel">
+                            <h4>Before Buyzo</h4>
+                            <p>Finding the right supplier takes time. Quotes are difficult to compare. Capabilities are unclear. Responses vary. And it's often impossible to know whether you're dealing directly with a factory or another layer in between.</p>
+                        </div>
+                        <div class="step-panel with-buyzo">
