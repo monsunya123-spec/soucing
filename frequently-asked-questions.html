@@ -3,50 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQs - Prestige Sourcing</title>
+    <title>FAQs - Buyzo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; color: #1e2a3e; line-height: 1.5; background: #fff; }
-        .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
-        
-        /* 头部导航 (与之前样式完全一致) */
-        header { background: white; box-shadow: 0 2px 15px rgba(0,0,0,0.03); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid #eef2f6; }
-        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; flex-wrap: wrap; }
-        .logo { font-size: 1.8rem; font-weight: 800; background: linear-gradient(135deg, #1a4d8c, #2b6cb0); -webkit-background-clip: text; background-clip: text; color: transparent; }
-        .logo span { color: #e67e22; background: none; }
-        .nav-links { display: flex; gap: 32px; align-items: center; flex-wrap: wrap; }
-        .nav-links a { text-decoration: none; font-weight: 600; color: #2c3e50; transition: color 0.2s; }
-        .nav-links a:hover, .nav-links a.active { color: #e67e22; }
-        .contact-nav { background: #1a4d8c; color: white !important; padding: 8px 20px; border-radius: 40px; }
-        .contact-nav:hover { background: #e67e22; color: white !important; }
-        
-        /* 页面头部 */
-        .page-hero { background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%); padding: 60px 0; text-align: center; border-bottom: 1px solid #e2e8f0; }
-        .page-hero h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 16px; }
-        .page-hero p { font-size: 1.2rem; color: #2c3e50cc; max-width: 700px; margin: 0 auto; }
-        
-        /* FAQ 区域布局 */
-        .faq-section { padding: 70px 0; background: #ffffff; }
-        .faq-grid { max-width: 900px; margin: 0 auto; }
-        .faq-category { margin-bottom: 48px; }
-        .faq-category h2 { font-size: 1.8rem; font-weight: 700; margin-bottom: 28px; border-left: 5px solid #e67e22; padding-left: 20px; color: #1a4d8c; }
-        .faq-item { border-bottom: 1px solid #e2edf2; margin-bottom: 20px; }
-        .faq-question { font-weight: 700; font-size: 1.2rem; padding: 20px 0 12px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: #0f2b3d; transition: 0.2s; }
-        .faq-question i { color: #e67e22; transition: transform 0.2s; font-size: 1.2rem; }
-        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; padding-right: 20px; color: #2d3e50d9; line-height: 1.6; }
+        :root { --red: #d9043d; --red-soft: rgba(217,4,61,0.08); --deep: #9d002c; --ink: #050505; --muted: rgba(5,5,5,0.68); --soft: #f6f6f6; --line: rgba(5,5,5,0.12); }
+        body { font-family: 'Inter', sans-serif; color: var(--ink); line-height: 1.7; background: #fff; }
+        .container { max-width: 1300px; margin: 0 auto; padding: 0 80px; }
+        header { background: #fff; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--line); }
+        .navbar { display: flex; justify-content: space-between; align-items: center; min-height: 82px; gap: 32px; }
+        .logo { font-size: 1.75rem; font-weight: 700; color: #000; line-height: 1; white-space: nowrap; }
+        .logo span, .logo-mark { color: var(--red); background: none; }
+        .nav-links { display: flex; gap: 28px; align-items: center; flex-wrap: wrap; justify-content: flex-end; }
+        .nav-links a { text-decoration: none; font-weight: 500; color: #111; transition: color 0.2s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--red); text-decoration: underline; text-underline-offset: 6px; }
+        .contact-nav { background: var(--red); color: #fff !important; min-height: 42px; padding: 8px 20px; border-radius: 100px; text-decoration: none !important; }
+        .contact-nav:hover { background: var(--deep); color: #fff !important; }
+        .page-hero { background: var(--soft); padding: 76px 0 64px; text-align: left; border-bottom: 1px solid var(--line); }
+        .page-hero h1 { font-size: 52px; line-height: 1.08; font-weight: 600; margin-bottom: 16px; max-width: 780px; }
+        .page-hero p { font-size: 18px; color: var(--muted); max-width: 760px; }
+        .page-hero a { color: var(--red) !important; font-weight: 600; }
+        .faq-section { padding: 72px 0; background: #ffffff; }
+        .faq-grid { max-width: 940px; margin: 0 auto; }
+        .faq-category { margin-bottom: 34px; padding: 28px; border: 1px solid var(--line); border-radius: 28px; transition: border-color 0.2s ease, box-shadow 0.2s ease; }
+        .faq-category:hover { border-color: var(--red); box-shadow: 16px 16px 64px rgba(217,4,61,0.08); }
+        .faq-category h2 { font-size: 1.65rem; font-weight: 700; margin-bottom: 18px; color: #000; }
+        .faq-item { border-top: 1px solid var(--line); }
+        .faq-question { font-weight: 650; font-size: 1.08rem; padding: 20px 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: #000; transition: 0.2s; gap: 18px; }
+        .faq-question i { color: var(--red); transition: transform 0.2s; font-size: 1rem; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; padding-right: 20px; color: var(--muted); line-height: 1.6; }
         .faq-answer p, .faq-answer ul { margin-bottom: 16px; margin-left: 20px; }
-        .faq-item.active .faq-answer { max-height: 600px; margin-bottom: 24px; }
+        .faq-answer h3 { color: #000; font-size: 1rem; margin: 18px 0 8px 20px; }
+        .faq-answer table { width: 100%; border-collapse: collapse; margin: 14px 0 18px 20px; max-width: 760px; }
+        .faq-answer th, .faq-answer td { border: 1px solid var(--line); padding: 10px 12px; text-align: left; vertical-align: top; }
+        .faq-answer th { color: #000; background: var(--red-soft); }
+        .faq-item.active .faq-answer { max-height: 1800px; margin-bottom: 24px; }
         .faq-item.active .faq-question i { transform: rotate(45deg); }
         
-        /* 页脚 */
-        footer { background: #0f2b3d; color: #cbd5e1; padding: 48px 0 24px; margin-top: 40px; }
-        .footer-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px; margin-bottom: 48px; }
-        .copyright { text-align: center; border-top: 1px solid #254358; padding-top: 24px; font-size: 0.85rem; }
-        @media (max-width: 768px) { .navbar { flex-direction: column; gap: 16px; } .page-hero h1 { font-size: 2rem; } }
+        footer { background: var(--deep); color: rgba(255,255,255,0.74); padding: 54px 0 26px; margin-top: 0; }
+        .footer-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px; margin-bottom: 42px; }
+        footer a { color: rgba(255,255,255,0.74) !important; text-decoration: none !important; }
+        footer a:hover { color: #fff !important; }
+        .copyright { text-align: center; border-top: 1px solid rgba(255,255,255,0.16); padding-top: 22px; font-size: 0.85rem; }
+        @media (max-width: 768px) { .container { padding: 0 20px; } .navbar { flex-direction: column; gap: 16px; padding: 18px 0; } .nav-links { justify-content: center; gap: 18px; } .page-hero h1 { font-size: 36px; } .faq-category { border-radius: 22px; padding: 22px; } }
     </style>
 </head>
 <body>
@@ -54,12 +56,13 @@
 <header>
     <div class="container">
         <div class="navbar">
-            <div class="logo">Prestige<span>Sourcing</span></div>
+            <div class="logo">Buy<span class="logo-mark">zo</span></div>
             <div class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="services.html">Services</a>
                 <a href="sourcing.html">Sourcing</a>
                 <a href="frequently-asked-questions.html" class="active">FAQs</a>
+                <a href="contact.html">Contact</a>
                 <a href="contact.html" class="contact-nav">Get in touch</a>
             </div>
         </div>
@@ -70,62 +73,55 @@
     <section class="page-hero">
         <div class="container">
             <h1>Frequently Asked Questions</h1>
-            <p>Explore some of our most commonly asked questions below. If you don't find what you are looking for, you are welcome to <a href="contact.html" style="color:#e67e22;">contact us</a> with your specific requirements.</p>
+            <p>Explore some of our most commonly asked questions below. If you don't find what you are looking for, you are welcome to <a href="contact.html">contact us</a> with your specific requirements.</p>
         </div>
     </section>
 
     <section class="faq-section">
         <div class="container faq-grid">
-            <!-- 分类 1: Sourcing and Supply -->
             <div class="faq-category">
                 <h2>Sourcing and Supply</h2>
                 
-                <div class="faq-item"><div class="faq-question">How do your sourcing fees work? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>We offer flexible engagement models: Client-Managed (we provide on-ground support while you manage supplier directly), PSG-Managed (we handle end-to-end from vetting to delivery), or Hybrid. Fees may be structured as a fixed project fee, hourly rate, percentage of order value, or commission.</p></div></div>
+                <div class="faq-item"><div class="faq-question">How do you charge? Are there any hidden fees? <i class="fas fa-plus"></i></div><div class="faq-answer"><h3>Buy Direct</h3><p>There is no setup fee. You simply pay the product cost plus a 10% commission.</p><p>Our service includes supplier verification, sample coordination, contract negotiation, quality control, logistics management, and after-sales support.</p><p>No hidden fees. Everything is clearly communicated before we start.</p><h3>Private Label & ODM</h3><p>We recommend starting with a free 20-minute consultation so we can understand your project.</p><p>Based on your requirements, we evaluate project complexity, product development requirements, order volume, and timeline.</p><p>We then provide a customized proposal, which may include a one-time setup fee depending on the project and a commission rate, typically between 10% and 15%, depending on order value.</p><p>All costs are confirmed in writing before any work begins. No unexpected charges or price increases.</p></div></div>
                 
-                <div class="faq-item"><div class="faq-question">Is there a minimum order value for sourcing projects? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>For sourcing and supply projects, our usual minimum is around USD $10,000 / NZD $15,000 net monthly order value. This can vary depending on product complexity, workload, and current capacity.</p></div></div>
+                <div class="faq-item"><div class="faq-question">How do you select suppliers? <i class="fas fa-plus"></i></div><div class="faq-answer"><h3>Our Expertise</h3><p>We've worked within China's supply chain ecosystem for more than 20 years, with deep experience in furniture, home decor, e-bikes, automotive parts, food additives, and pet products.</p><h3>How We Vet Factories</h3><p>We don't simply maintain a supplier database. We build long-term relationships and evaluate factories through major domestic and international trade shows, regular factory visits, and deep knowledge of China's manufacturing clusters.</p><p>For example: furniture in Foshan, electronics in Shenzhen, and hardware products in Yongkang.</p><p>Every factory we recommend has been carefully observed and validated over time.</p></div></div>
                 
-                <div class="faq-item"><div class="faq-question">Why do you have a minimum order value? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>Sourcing from China takes experience, coordination, and time. A single USD $10,000 order is usually far more efficient to manage properly than ten separate USD $1,000 orders. If your order is below our minimum, we may still help through paid consulting or freight support.</p></div></div>
+                <div class="faq-item"><div class="faq-question">What if I'm not satisfied with the products? <i class="fas fa-plus"></i></div><div class="faq-answer"><h3>Prevention Comes First</h3><p>Quality control happens at three stages: before production, during production, and after production.</p><p>Before production, we define standards. During production, we monitor progress and perform inspections. After production, we conduct final quality inspection.</p><h3>If Issues Still Occur</h3><p>We help identify the root cause, communicate with the factory on your behalf, coordinate solutions such as rework, replacement, or partial refunds, and follow through until the issue is resolved.</p><p>We don't disappear after shipment. We stay on your side and work toward a fair solution.</p></div></div>
                 
-                <div class="faq-item"><div class="faq-question">Are there any products you do not supply? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>We do not source counterfeit, copyright-infringing, or otherwise illegal products. As the importer, you are responsible for ensuring compliance with your local laws and import regulations.</p></div></div>
+                <div class="faq-item"><div class="faq-question">How do you ensure quality? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>We rely on three layers of quality control.</p><h3>Before Production</h3><p>We confirm product specifications, seal and preserve an approved Golden Sample, and define inspection standards.</p><h3>During Production</h3><p>We monitor production progress, conduct in-process inspections, and identify issues before they become costly problems.</p><h3>After Production</h3><p>We perform final inspections based on AQL standards and approve shipment only after products meet requirements.</p><p>We don't rely solely on the factory's own quality system. We use independent quality control processes to protect your interests.</p></div></div>
                 
-                <div class="faq-item"><div class="faq-question">Can you supply and ship goods worldwide? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>We can ship to any country not subject to trade restrictions under WTO, UN, or international law. Buyers are responsible for ensuring their destination is not under any active trade embargo.</p></div></div>
+                <div class="faq-item"><div class="faq-question">Will I receive regular updates? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>Absolutely. Depending on the stage of your project, we provide regular updates.</p><p>During requirement analysis, updates are provided as needed for requirement confirmation and solution development. During supplier selection, sampling, and production, updates are typically weekly. During shipping, we provide real-time updates for departure, arrival, customs clearance, and estimated delivery dates.</p><p>We also provide English and Chinese reports, photos and videos when needed, and scheduled voice or video calls. You'll always know where things stand.</p></div></div>
                 
-                <div class="faq-item"><div class="faq-question">Do you only source within Guangdong? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>No, we source from anywhere in China. While Guangdong projects often involve lower travel costs, we work with trusted partners nationwide to manage projects efficiently.</p></div></div>
+                <div class="faq-item"><div class="faq-question">How quickly do you respond? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>Typical response times are within 2 hours on WeChat or WhatsApp during business days, within 24 hours by email, and by appointment for phone or video calls.</p><p>We understand time zone differences and do our best to respond promptly. For urgent matters, we're always reachable.</p></div></div>
+
+                <div class="faq-item"><div class="faq-question">Can I communicate directly with the factory? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>Yes. We support two approaches.</p><h3>Option A — Through Buyzo (Recommended)</h3><p>We act as your bridge by filtering information, handling translations, reducing misunderstandings, and improving communication efficiency. You don't need to deal with language barriers or delayed responses.</p><h3>Option B — Direct Factory Communication</h3><p>If you'd like to speak directly with the manufacturer, that's perfectly fine. We don't restrict access. We'll continue supporting the project and ensure proper coordination throughout the process.</p></div></div>
+
+                <div class="faq-item"><div class="faq-question">Do you provide contracts? What protections do they include? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>Yes. Our bilingual contracts in English and Chinese clearly define product specifications and quality standards, pricing and payment terms, delivery schedules and delay responsibilities, remedies for quality issues, confidentiality agreements, and intellectual property ownership.</p><p>This ensures both parties share the same understanding from the beginning.</p></div></div>
+
+                <div class="faq-item"><div class="faq-question">Can I get a refund if I decide to stop the project? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>Yes. We offer flexible exit options.</p><p>If no actual procurement costs have been incurred during the requirement and planning stage, fees may be partially refundable.</p><p>Costs already paid to third parties, such as sampling fees, product testing, or certifications, cannot be refunded.</p><p>We'll always explain the nature of each cost and refund policy before the project starts, so there are no surprises later.</p></div></div>
+
+                <div class="faq-item"><div class="faq-question">How do you handle language and cultural differences? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>Our bilingual team understands both Western business expectations and Chinese manufacturing culture.</p><p>We help translate technical requirements and commercial terms, prevent misunderstandings caused by cultural differences, explain your needs in a way factories understand, and explain factory feedback in a way you understand.</p><p>Simply put, we speak both languages — and both sides of the business. We make communication easier, clearer, and more productive.</p></div></div>
             </div>
             
-            <!-- 分类 2: Freight & Warehousing -->
             <div class="faq-category">
                 <h2>Freight & Warehousing</h2>
                 
-                <div class="faq-item"><div class="faq-question">Can I use your freight service without using your sourcing service? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>Yes, we offer freight services to all customers. Sourcing clients receive preferential rates, but non-sourcing customers are welcome to request quotes. Minimum shipment volumes may apply depending on destination.</p></div></div>
+                <div class="faq-item"><div class="faq-question">Can I use your freight service without using your sourcing service? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>Absolutely. Our freight and warehousing services are completely independent of our sourcing advisory. You can use us purely for shipping, customs clearance, and last-mile delivery — even if you already have your own suppliers in China or elsewhere.</p></div></div>
                 
-                <div class="faq-item"><div class="faq-question">Do you ship from China to New Zealand and Australia? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>Yes, we regularly handle freight to both NZ and Australia, including major centres and regional/rural addresses depending on the freight method.</p></div></div>
+                <div class="faq-item"><div class="faq-question">Do you ship from China to New Zealand and Australia? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>We have a logistics partner, Nexusfreight, whose ocean freight rates from China to New Zealand and Australia are transparent, with no hidden fees.</p><p>Feel free to visit <a href="https://www.nexusfreight.co.nz/" target="_blank" rel="noopener" style="color:#d9043d; font-weight:600;">nexusfreight.co.nz</a>.</p></div></div>
                 
-                <div class="faq-item"><div class="faq-question">What freight options do you offer? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>Sea freight (LCL/FCL), air freight, courier, express shipping, door-to-door, warehouse consolidation, and Amazon FBA preparation support.</p></div></div>
+                <div class="faq-item"><div class="faq-question">What freight options do you offer? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>We offer flexible solutions for all cargo types and volumes:</p><table><thead><tr><th>Option</th><th>Best For</th></tr></thead><tbody><tr><td>LCL (Less than Container Load)</td><td>Smaller shipments — you share a container with other goods</td></tr><tr><td>FCL (Full Container Load)</td><td>Large shipments — you get an entire container to yourself</td></tr><tr><td>Air Freight</td><td>Time-sensitive or high-value goods</td></tr><tr><td>Sea Freight</td><td>Cost-effective shipping for bulk or heavy items</td></tr></tbody></table></div></div>
                 
-                <div class="faq-item"><div class="faq-question">Can you collect goods from my supplier in China? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>Yes. We can coordinate pickup from your supplier's address, warehouse, or factory in China. We'll need supplier contact details, pickup address, carton details, and product information.</p></div></div>
+                <div class="faq-item"><div class="faq-question">Can you collect goods from my supplier in China? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>Yes, absolutely. We can arrange pick-up directly from your supplier's factory or warehouse anywhere in China. This is a standard part of our service — we coordinate with your supplier on timing, packaging requirements, and documentation so the goods move smoothly from their dock to our shipping container.</p></div></div>
                 
-                <div class="faq-item"><div class="faq-question">Can you consolidate goods from multiple suppliers? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>Yes. Consolidation helps reduce duplicated freight and customs charges. We'll check product types, sizes, supplier locations, and timing to determine suitability.</p></div></div>
+                <div class="faq-item"><div class="faq-question">Can you consolidate goods from multiple suppliers? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>Absolutely — this is one of our core strengths. We consolidate goods from multiple suppliers into a single shipment: one container, one customs clearance, one delivery, one bill.</p><p>We coordinate pickups across China, repack and inspect at our DCs, and ship as one. Lower cost, less admin, no headaches.</p></div></div>
                 
-                <div class="faq-item"><div class="faq-question">Do freight prices fluctuate? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>Yes. Freight prices can change due to fuel costs, exchange rates, capacity, peak season, and port congestion. Any estimate is indicative until shipment details are confirmed.</p></div></div>
+                <div class="faq-item"><div class="faq-question">What happens when my goods arrive in New Zealand? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>We manage the entire arrival process so you don't have to.</p><p><strong>Customs & Biosecurity Clearance</strong> — If any inspection is required, we manage it on your behalf.</p><p><strong>Warehousing</strong> — Your goods can be stored at our facility if you're not ready for immediate delivery.</p><p><strong>Last-Mile Delivery</strong> — We arrange final delivery to your specified address anywhere. We also offer pick & pack services for e-commerce businesses.</p></div></div>
                 
-                <div class="faq-item"><div class="faq-question">What information do you need for a freight quote? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>We typically need: pickup city, delivery address, INCOTERMS, product name/HSCODE, carton count/dimensions/weight, total value, and any special handling requirements (batteries, liquids, etc).</p></div></div>
+                <div class="faq-item"><div class="faq-question">Do you offer drop-shipping services? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>We don't run your store, but we power your logistics.</p><p>We partner with strategically located DCs (Distribution Centres) in Shenzhen and Shanghai. We provide the physical infrastructure to make dropshipping from China work seamlessly.</p><p><strong>China Domestic Dispatch:</strong> We pick, pack, and ship individual orders directly from our DCs to your Chinese end-customers.</p><p><strong>International Dropshipping:</strong> We store your inventory in our DCs, and when an order comes in, we ship it internationally directly to your customer's door anywhere in the world.</p><p>You stay in control of your sales and customer service; we handle the heavy lifting of storage, picking, packing, and global dispatch.</p></div></div>
             </div>
             
-            <!-- 分类 3: eCommerce Seller Services -->
-            <div class="faq-category">
-                <h2>eCommerce Seller Services</h2>
-                
-                <div class="faq-item"><div class="faq-question">Can you help if we are new to eCommerce? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>Our full sourcing services are best for businesses with an active budget and product direction. If you're just starting, hourly consulting may be a better fit before committing to manufacturing.</p></div></div>
-                
-                <div class="faq-item"><div class="faq-question">Do you assist with dropshipping? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>We source direct from China and don't operate as a dropshipping service. However, we can help established dropshippers transition toward holding inventory with store-and-ship operations.</p></div></div>
-                
-                <div class="faq-item"><div class="faq-question">Can you ship goods to Amazon FBA? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>Yes, we can ship directly to Amazon FBA warehouses worldwide using Delivered Duty Paid (DDP) shipping options.</p></div></div>
-                
-                <div class="faq-item"><div class="faq-question">Can you print and apply product labels for FBA? <i class="fas fa-plus"></i></div><div class="faq-answer"><p>Yes. We can help arrange printing and application of FNSKU labels, carton labels, and barcodes. Clients must provide the correct label files and Amazon shipment requirements before packing.</p></div></div>
-            </div>
-            
-            <p style="margin-top: 40px; text-align: center; font-style: italic;">Still have questions? <a href="contact.html" style="color:#e67e22; font-weight:600;">Contact us directly →</a></p>
+            <p style="margin-top: 40px; text-align: center; font-style: italic;">Still have questions? <a href="contact.html" style="color:#d9043d; font-weight:600;">Contact us directly →</a></p>
         </div>
     </section>
 </main>
@@ -133,11 +129,11 @@
 <footer>
     <div class="container">
         <div class="footer-grid">
-            <div><div class="logo" style="color:white; background:none;">Prestige<span style="color:#e67e22;">Sourcing</span></div><p>New Zealand-owned, Shenzhen-based</p></div>
-            <div><h4>Quick links</h4><a href="services.html" style="color:#cbd5e1; text-decoration:none;">Services</a><br><a href="sourcing.html" style="color:#cbd5e1; text-decoration:none;">Sourcing</a><br><a href="frequently-asked-questions.html" style="color:#cbd5e1; text-decoration:none;">FAQs</a></div>
-            <div><h4>Contact</h4><p><i class="fas fa-envelope"></i> sourcing@prestigesourcing.net</p></div>
+            <div><div class="logo" style="color:white; background:none;">Buy<span class="logo-mark">zo</span></div><p>From Idea to Arrival.</p></div>
+            <div><h4>Quick links</h4><a href="services.html" style="color:rgba(255,255,255,0.74); text-decoration:none;">Services</a><br><a href="sourcing.html" style="color:rgba(255,255,255,0.74); text-decoration:none;">Sourcing</a><br><a href="frequently-asked-questions.html" style="color:rgba(255,255,255,0.74); text-decoration:none;">FAQs</a></div>
+            <div><h4>Contact</h4><p><i class="fas fa-envelope"></i> sourcing@buyzo.net</p></div>
         </div>
-        <div class="copyright">© 2025 Prestige Sourcing Global — Practical China sourcing without the guesswork</div>
+        <div class="copyright">Buyzo - From Idea to Arrival.</div>
     </div>
 </footer>
 
