@@ -3,33 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services - Prestige Sourcing</title>
+    <title>Our Services - Buyzo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; color: #1e2a3e; line-height: 1.5; }
-        .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
-        header { background: white; box-shadow: 0 2px 15px rgba(0,0,0,0.03); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid #eef2f6; }
-        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; flex-wrap: wrap; }
-        .logo { font-size: 1.8rem; font-weight: 800; background: linear-gradient(135deg, #1a4d8c, #2b6cb0); -webkit-background-clip: text; background-clip: text; color: transparent; }
-        .logo span { color: #e67e22; background: none; }
-        .nav-links { display: flex; gap: 32px; align-items: center; flex-wrap: wrap; }
-        .nav-links a { text-decoration: none; font-weight: 600; color: #2c3e50; transition: color 0.2s; }
-        .nav-links a:hover, .nav-links a.active { color: #e67e22; }
-        .contact-nav { background: #1a4d8c; color: white !important; padding: 8px 20px; border-radius: 40px; }
-        .page-hero { background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%); padding: 60px 0; text-align: center; }
-        .page-hero h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 16px; }
-        .services-list { padding: 60px 0; }
-        .service-item { display: flex; gap: 30px; margin-bottom: 48px; padding: 24px; background: #f9fbfd; border-radius: 24px; flex-wrap: wrap; }
-        .service-icon { font-size: 3rem; color: #1a4d8c; min-width: 80px; }
-        .service-content h3 { font-size: 1.6rem; margin-bottom: 12px; }
-        footer { background: #0f2b3d; color: #cbd5e1; padding: 48px 0 24px; margin-top: 40px; }
-        .footer-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px; margin-bottom: 48px; }
-        .copyright { text-align: center; border-top: 1px solid #254358; padding-top: 24px; }
-        @media (max-width: 768px) { .navbar { flex-direction: column; gap: 16px; } .page-hero h1 { font-size: 2rem; } }
+        :root { --red: #d9043d; --red-soft: rgba(217,4,61,0.08); --deep: #9d002c; --ink: #050505; --muted: rgba(5,5,5,0.68); --soft: #f6f6f6; --line: rgba(5,5,5,0.12); }
+        body { font-family: 'Inter', sans-serif; color: var(--ink); line-height: 1.7; background: #fff; }
+        .container { max-width: 1300px; margin: 0 auto; padding: 0 80px; }
+        header { background: #fff; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--line); }
+        .navbar { display: flex; justify-content: space-between; align-items: center; min-height: 82px; gap: 32px; }
+        .logo { font-size: 1.75rem; font-weight: 700; color: #000; line-height: 1; white-space: nowrap; }
+        .logo span, .logo-mark { color: var(--red); background: none; }
+        .nav-links { display: flex; gap: 28px; align-items: center; flex-wrap: wrap; justify-content: flex-end; }
+        .nav-links a { text-decoration: none; font-weight: 500; color: #111; transition: color 0.2s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--red); text-decoration: underline; text-underline-offset: 6px; }
+        .contact-nav { background: var(--red); color: #fff !important; min-height: 42px; padding: 8px 20px; border-radius: 100px; text-decoration: none !important; }
+        .contact-nav:hover { background: var(--deep); color: #fff !important; }
+        .page-hero { background: var(--soft); padding: 76px 0 64px; text-align: left; border-bottom: 1px solid var(--line); }
+        .page-hero h1 { font-size: 52px; line-height: 1.08; font-weight: 600; margin-bottom: 16px; max-width: 780px; }
+        .page-hero p { color: var(--muted); font-size: 18px; max-width: 680px; }
+        .services-list { padding: 72px 0; background: #fff; }
+        .service-item { display: grid; grid-template-columns: 72px minmax(0,1fr); gap: 24px; margin-bottom: 22px; padding: 30px; background: #fff; border: 1px solid var(--line); border-radius: 28px; min-height: 180px; transition: border-color 0.2s ease, box-shadow 0.2s ease; }
+        .service-item:hover { border-color: var(--red); box-shadow: 16px 16px 64px rgba(217,4,61,0.08); }
+        .service-icon { color: var(--red); background: var(--red-soft); width: 62px; height: 62px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 24px; }
+        .service-content h3 { font-size: 1.6rem; margin-bottom: 10px; line-height: 1.25; }
+        .service-content p { color: var(--muted); }
+        .service-tagline { color: #000 !important; font-size: 1.08rem; font-weight: 600; margin-bottom: 8px; }
+        .fee-list { list-style: none; margin: 12px 0 18px; padding: 0; color: var(--muted); }
+        .fee-list li { margin: 4px 0; }
+        .service-detail-label { display: block; color: #000; font-weight: 700; margin-top: 14px; margin-bottom: 6px; }
+        .service-detail { color: var(--muted); }
+        footer { background: var(--deep); color: rgba(255,255,255,0.74); padding: 54px 0 26px; margin-top: 0; }
+        .footer-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px; margin-bottom: 42px; }
+        footer a { color: rgba(255,255,255,0.74) !important; text-decoration: none !important; }
+        footer a:hover { color: #fff !important; }
+        .copyright { text-align: center; border-top: 1px solid rgba(255,255,255,0.16); padding-top: 22px; }
+        @media (max-width: 768px) { .container { padding: 0 20px; } .navbar { flex-direction: column; gap: 16px; padding: 18px 0; } .nav-links { justify-content: center; gap: 18px; } .page-hero h1 { font-size: 36px; } .service-item { grid-template-columns: 1fr; border-radius: 22px; } }
     </style>
 </head>
 <body>
@@ -37,11 +49,12 @@
 <header>
     <div class="container">
         <div class="navbar">
-            <div class="logo">Prestige<span>Sourcing</span></div>
+            <div class="logo">Buy<span class="logo-mark">zo</span></div>
             <div class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="services.html" class="active">Services</a>
                 <a href="sourcing.html">Sourcing</a>
+                <a href="frequently-asked-questions.html">FAQs</a>
                 <a href="contact.html">Contact</a>
                 <a href="contact.html" class="contact-nav">Get in touch</a>
             </div>
@@ -53,38 +66,55 @@
     <section class="page-hero">
         <div class="container">
             <h1>Our Sourcing Services</h1>
-            <p>End-to-end solutions for China procurement and logistics</p>
+            <p>End-to-end sourcing, purchasing, production, and logistics support.</p>
         </div>
     </section>
 
     <section class="services-list">
         <div class="container">
             <div class="service-item">
-                <div class="service-icon"><i class="fas fa-search"></i></div>
+                <div class="service-icon"><i class="fas fa-cart-shopping"></i></div>
                 <div class="service-content">
-                    <h3>Supplier Sourcing & Verification</h3>
-                    <p>We identify, validate, and coordinate with reliable Chinese manufacturers that match your product requirements. Includes factory audits, capability assessment, and background checks.</p>
+                    <h3>Buy Direct</h3>
+                    <p class="service-tagline">From the factory to your door — no setup fees.</p>
+                    <p>Perfect for businesses that already know what they want and just need reliable execution.</p>
+                    <span class="service-detail-label">Fee:</span>
+                    <ul class="fee-list">
+                        <li>$0 setup fee</li>
+                        <li>10% commission on order value</li>
+                    </ul>
+                    <span class="service-detail-label">We handle:</span>
+                    <p class="service-detail">Supplier verification · Sampling · Contract negotiation · Quality control · Shipping coordination · Post-purchase support</p>
                 </div>
             </div>
             <div class="service-item">
-                <div class="service-icon"><i class="fas fa-clipboard-list"></i></div>
+                <div class="service-icon"><i class="fas fa-box-open"></i></div>
                 <div class="service-content">
-                    <h3>Sampling & Production Oversight</h3>
-                    <p>From prototype to mass production, we manage quality control, sample approval, and production follow-up to ensure your specifications are met.</p>
-                </div>
-            </div>
-            <div class="service-item">
-                <div class="service-icon"><i class="fas fa-ship"></i></div>
-                <div class="service-content">
-                    <h3>Freight & Logistics Coordination</h3>
-                    <p>Air freight, sea freight, warehousing, consolidation, and door-to-door delivery. We handle all export documentation and customs clearance support.</p>
+                    <h3>Private Label</h3>
+                    <p class="service-tagline">Build your own product from the ground up.</p>
+                    <p>For brands creating something entirely new. Full project management from concept to delivery.</p>
+                    <span class="service-detail-label">Fee:</span>
+                    <ul class="fee-list">
+                        <li>$2,500 setup fee (inc. GST)</li>
+                        <li>10% commission on order value</li>
+                    </ul>
+                    <span class="service-detail-label">You get:</span>
+                    <p class="service-detail">Dedicated bilingual coordinator · Manufacturer research & shortlisting · Custom sample development · Branded packaging · IP protection & contract support · Production QC & progress tracking · Optional factory visits · Post-launch support</p>
                 </div>
             </div>
             <div class="service-item">
                 <div class="service-icon"><i class="fas fa-tags"></i></div>
                 <div class="service-content">
-                    <h3>Brand-Ready Packaging</h3>
-                    <p>Labeling, custom packaging, and supplier development to get your products market-ready for international retail or e-commerce.</p>
+                    <h3>White Label (ODM)</h3>
+                    <p class="service-tagline">Ready-made products. Your brand. Your market.</p>
+                    <p>Take existing products, add your logo, and go to market fast.</p>
+                    <span class="service-detail-label">Fee:</span>
+                    <ul class="fee-list">
+                        <li>$1,500 setup fee (inc. GST)</li>
+                        <li>15% commission on order value</li>
+                    </ul>
+                    <span class="service-detail-label">Includes:</span>
+                    <p class="service-detail">End-to-end project management · Bilingual coordinator · Supplier sourcing & verification · Sample production · Custom logo application · Contract & IP support · Manufacturing oversight · Shipping management · Post-purchase support</p>
                 </div>
             </div>
         </div>
@@ -94,11 +124,11 @@
 <footer>
     <div class="container">
         <div class="footer-grid">
-            <div><div class="logo" style="color:white; background:none;">Prestige<span style="color:#e67e22;">Sourcing</span></div><p>New Zealand-owned, Shenzhen-based</p></div>
-            <div><h4>Quick links</h4><a href="services.html" style="color:#cbd5e1; text-decoration:none;">Services</a><br><a href="sourcing.html" style="color:#cbd5e1; text-decoration:none;">Sourcing</a></div>
-            <div><h4>Contact</h4><p><i class="fas fa-envelope"></i> sourcing@prestigesourcing.net</p></div>
+            <div><div class="logo" style="color:white; background:none;">Buy<span class="logo-mark">zo</span></div><p>From Idea to Arrival.</p></div>
+            <div><h4>Quick links</h4><a href="services.html" style="color:rgba(255,255,255,0.74); text-decoration:none;">Services</a><br><a href="sourcing.html" style="color:rgba(255,255,255,0.74); text-decoration:none;">Sourcing</a></div>
+            <div><h4>Contact</h4><p><i class="fas fa-envelope"></i> sourcing@buyzo.net</p></div>
         </div>
-        <div class="copyright">© 2025 Prestige Sourcing Global</div>
+        <div class="copyright">© 2025 Buyzo Global</div>
     </div>
 </footer>
 </body>
